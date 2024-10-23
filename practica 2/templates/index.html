@@ -1,0 +1,18 @@
+{% extends './base.html'%}
+{% block title %} Menu de opciones {% endblock %}
+
+
+      
+
+{% block body%}
+<h1>Menú de opciones</h1>
+<ul>
+    <li><a href="{{ url_for('inscripcion_curso') }}">Inscripción de curso</a></li>
+    <li><a href="{{ url_for('registro_usuarios') }}">Registro de usuarios</a></li>
+    <li><a href="{{ url_for('registro_productos') }}">Registro de productos</a></li>
+    <li><a href="{{ url_for('registro_libros') }}">Registro de libros</a></li>
+</ul>
+
+  
+
+{% endblock%}

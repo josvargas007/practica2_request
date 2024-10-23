@@ -1,0 +1,26 @@
+{% extends './base.html'%}
+{% block title %} Registro de Productos {% endblock %}
+
+
+      
+
+{% block body%}
+<h1>Registro de productos</h1>
+<form method="post">
+    <label>Producto:</label>
+    <input type="text" name="producto"><br>
+    <label>Categoría:</label>
+        <select name="categoria">
+        <option value="">Seleccione una categoría</option>
+        {% for categoria in categorias %}
+         <option value="{{ categoria }}">{{ categoria }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Precio:</label>
+    <input type="number" name="precio"><br>
+    <label>Descripción:</label>
+    <textarea name="descripcion"></textarea><br>
+    <input type="submit" value="Registrar producto">
+</form>
+
+{% endblock%}
